@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>KASCO TRUCK QUEUE</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- sidebar CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- DatePick -->
+    <link rel="stylesheet" type="text/css" href="css/datepicker.css">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper" style="z-index:5;">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand" style="border:none;margin-bottom:3px;">
+                    <a href="mainpage.html" class="text-center" >
+                        <img src="img/Logo.jpg" class="img-responsive" style="margin:0 auto;">
+                    </a>    
+                </li>
+                <img src="img/pat_logo.jpg" class="img-responsive">  
+
+                    <div class="input-group" style="padding:10px; ">
+                      <input type="text" class="form-control text-center" placeholder="SEARCH">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><i class="fa fa-search" style="color: #8dcee4;"></i></button>
+                      </span>
+                    </div>
+                <!-- /input-group -->
+                <li>
+                    <a class="text-center" style="color:#ffffff;background-color:#00aabd;">สำหรับผู้ประกอบการท่าเรือ</a>
+                </li>
+                <li>
+                    <a href="mainpage.html"><i class="fa fa-home fa-fw" style="margin-right:20px;"></i> หน้าหลัก</a>
+                </li>
+                
+                <li>
+                    <a href="set_quota.html"><i class="fa fa-desktop fa-fw" style="margin-right:20px;"></i> กำหนดโควต้า</a>
+                </li>
+                <li>
+                    <a href="truck_data.html"><i class="fa fa-truck fa-fw" style="margin-right:20px;"></i> บันทึกข้อมูลรอบรถเข้า-ออก</a>
+                </li>
+
+                <li>
+                    <a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false"><i class="fa fa-info-circle fa-fw" style="margin-right:20px;"></i>รับ - ส่งข้อมูล</a>
+                    <ul class="nav collapse" id="submenu1" role="menu" aria-labelledby="btn-1" style="padding-left:50px;">
+                        <li><a href="data_receive.html">รับข้อมูล</a></li>
+                        <li><a href="#">ส่งข้อมูล</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-list-alt fa-fw" style="margin-right:20px;"></i> ข้อมูลหลัก</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-bar-chart fa-fw" style="margin-right:20px;"></i> รายงานสถิติ</a>
+                </li>
+                <li>
+                    <a href="changepassword.html"><i class="fa fa-exchange fa-fw" style="margin-right:20px;"></i> เปลี่ยนรหัสผ่าน</a>
+                </li>  
+
+                <!-- IF have Sub menu -->
+                <!-- <li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false">Link 2 (toggle)</a>
+                    <ul class="nav collapse" id="submenu1" role="menu" aria-labelledby="btn-1">
+                        <li><a href="#">Link 2.1</a></li>
+                        <li><a href="#">Link 2.2</a></li>
+                        <li><a href="#">Link 2.3</a></li>
+                    </ul>
+                </li> -->
+                               
+            </ul>
+        </div></div>
+        <!-- /#sidebar-wrapper -->
+
+       
+                        <!-- Toggle -->
+                        <a href="#menu-toggle" class="btn btn-link" id="menu-toggle" style="position:absolute;top:100;left:60; z-index:200; margin:1.5px;"><i class="fa fa-bars fa-fw text-center" style="color:#3b4042;" aria-hidden="true"></i></a>
+                        
+        
+
+        <!-- Page Content -->
+        <!-- Page Header -->
+        <div id="topnavbar">
+            <nav class="navbar navbar-static-top topnavbar navbarfix" style="margin-bottom:0px;">
+                    <div class="container-fluid">
+                        
+                        <ul class="nav navbar-nav navbar-right text-right">
+                          <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-user" aria-hidden="true"></i>
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Log out</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                        
+                    </div>
+            </nav>
+        </div>
+        <!-- Page Header -->
+
+        <div class="mainpage-header-picture text-color-white">
+            <div class="mainpage">
+                <img src="img/mainpage_topleft.png" style="padding:13px 23px;">
+            </div>
+        </div>
+
+        <!-- Contant -->
+        <div class="mainpage-contant row">
+            <div class="col-md-12">
+                
+            <div class="row ">
+                <div class="col-md-6 col-md-offset-3 text-center mainpage-text-header" style="font-weight:700;">
+                    PORT AUTHORITY OF THAILAND
+                </div>
+            </div>
+
+
+            <div class="row " style="margin:55px;">
+                <div class="col-md-3 col-xs-6 mainpage-border" style="padding:25px;"">
+                    <div class=""><img src="img/mainpage_login.png"></div>
+
+                    Date : วันที่ 11/l8/2559<br>
+                    User : ดำรง  ธรรมประวัติ<br>
+                    Type : ผู้ประกอบการท่าเรือ<br>
+
+                    
+                    <a href="#">UPDATE PROFILE</a>
+                </div>
+                <div class="col-md-3 col-xs-6 mainpage-border" style="padding:25px;">
+                    <div class=""><img src="img/mainpage_contact.png"></div>
+
+                    ที่อยู่: 444 ถนน.ท่าเรือ คลองเตย<br>
+                    กรุงเทพ 10110 ประเทศไทย <br>
+                    โทร : 02-269-3000 <br>
+                    โทรสาร : 02-672-7156 <br>
+                    Email : info@port.co.th <br>
+
+                    <a href="#">UPDATE PROFILE</a>
+                </div>
+                <div class="col-md-6">
+                    <div class=""><img src="img/mainpage_welcome.png" style="padding-left:25px;"></div>
+                    <div class="horizontal-line" style="margin: 5px 0;"></div>
+                    <div class="" style="padding-left:25px;">
+                        โครงการพัฒนาระบบอิเล็กทรอนิกส์เพื่อช่วยบริหารเวลารถบรรทุกสินค้าเข้าออกท่าเรือแหลมฉบัง <br> ระบบอิเล็กทรอนิกส์เพื่อช่วยบริหารเวลารถบรรทุกสินค้าเข้าออกท่าเรือแหลมฉบัง (Truck Queue)<br>
+                        เป็นระบบที่มีจุดประสงค์เพื่อแก้ใขปัญหาการจราจร ของ ทฉล. อย่างยังยืน (Sustainable) <br>
+                        <a href="#"> READ MORE</a>
+                    </div>
+                    <div class="horizontal-line" style="margin: 5px 0;"></div>
+                    <div style="padding-left:25px;">
+                        <a class="btn btn-mainpage" href="#" role="button">Report</a>
+                        <a class="btn btn-mainpage" href="#" role="button">Dashboard</a>
+                        <a class="btn btn-mainpage" href="#" role="button">Logout</a>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+        <!-- End Contant -->
+
+
+
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <div class="kasco-footer">
+            <div class="row">
+                <div class="col-md-12 text-right">
+                    KASCO DATABASE VERSION 4.0
+                </div>  
+            </div>
+    </div>    
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- DatePick -->
+    <script src="js/bootstrap-datepicker.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+    <!-- Datepick -->
+    <script>
+    var nowTemp = new Date();
+    var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+     
+    var checkin = $('#dpd1').datepicker({
+      onRender: function(date) {
+        return date.valueOf() < now.valueOf() ? 'disabled' : '';
+      }
+    }).on('changeDate', function(ev) {
+      if (ev.date.valueOf() > checkout.date.valueOf()) {
+        var newDate = new Date(ev.date)
+        newDate.setDate(newDate.getDate() + 1);
+        checkout.setValue(newDate);
+      }
+      checkin.hide();
+      $('#dpd2')[0].focus();
+    }).data('datepicker');
+    var checkout = $('#dpd2').datepicker({
+      onRender: function(date) {
+        return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+      }
+    }).on('changeDate', function(ev) {
+      checkout.hide();
+    }).data('datepicker');
+    </script>
+
+</body>
+
+</html>

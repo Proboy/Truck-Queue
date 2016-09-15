@@ -1,0 +1,690 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model_TQ.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TQ_MS_DRIVER_INFO">
+          <Key>
+            <PropertyRef Name="DRIVER_INFO_ID" />
+          </Key>
+          <Property Name="DRIVER_INFO_ID" Type="number" Precision="38" Scale="0" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TRANS_ID" Type="varchar2" MaxLength="20" Nullable="false" />
+          <Property Name="DRIVER_LICENSE" Type="varchar2" MaxLength="20" />
+          <Property Name="DRIVER_NAME" Type="varchar2" MaxLength="200" />
+          <Property Name="ADDRESS" Type="varchar2" MaxLength="200" />
+          <Property Name="TEL" Type="varchar2" MaxLength="20" />
+          <Property Name="CREATED_BY" Type="number" Precision="19" Scale="0" />
+          <Property Name="CREATED_DATE" Type="timestamp" Precision="6" />
+          <Property Name="UPDATED_BY" Type="number" Precision="19" Scale="0" />
+          <Property Name="UPDATED_DATE" Type="timestamp" Precision="6" />
+          <Property Name="IS_DELETED" Type="varchar2" MaxLength="1" />
+          <Property Name="CANCEL_ID" Type="varchar2" MaxLength="20" />
+          <Property Name="CANCEL_DATE" Type="timestamp" Precision="6" />
+          <Property Name="ENT_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="CMP_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="FAL_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="USR_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="BPN_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="STATUS_IX" Type="number" Precision="19" Scale="0" />
+        </EntityType>
+        <EntityType Name="TQ_MS_TERMINAL">
+          <Key>
+            <PropertyRef Name="TERMINAL_CODE" />
+          </Key>
+          <Property Name="TERMINAL_ID" Type="number" Precision="38" Scale="0" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TERMINAL_CODE" Type="varchar2" MaxLength="20" Nullable="false" />
+          <Property Name="TERMINAL_NAME" Type="varchar2" MaxLength="200" />
+          <Property Name="OPERATION" Type="varchar2" MaxLength="200" />
+          <Property Name="LOCATION" Type="varchar2" MaxLength="200" />
+          <Property Name="WEBSITE" Type="varchar2" MaxLength="200" />
+          <Property Name="TEL" Type="number" Precision="30" Scale="0" />
+          <Property Name="AUTHORIZATION_CODE" Type="varchar2" MaxLength="20" />
+          <Property Name="CREATED_BY" Type="number" Precision="19" Scale="0" />
+          <Property Name="CREATED_DATE" Type="date" />
+          <Property Name="UPDATED_BY" Type="number" Precision="19" Scale="0" />
+          <Property Name="UPDATED_DATE" Type="date" />
+          <Property Name="IS_DELETED" Type="varchar2" MaxLength="20" />
+          <Property Name="CANCEL_BY" Type="varchar2" MaxLength="50" />
+          <Property Name="CANCEL_DATE" Type="date" />
+          <Property Name="ENT_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="CMP_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="FAL_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="USR_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="BPN_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="STATUS_IX" Type="number" Precision="19" Scale="0" />
+          <Property Name="CARD_ID" Type="varchar2" MaxLength="13" />
+          <Property Name="CONNECT_NAME" Type="varchar2" MaxLength="200" />
+          <Property Name="FAX" Type="varchar2" MaxLength="30" />
+          <Property Name="EMAIL" Type="varchar2" MaxLength="100" />
+          <Property Name="ADDRESS" Type="varchar2" MaxLength="200" />
+          <Property Name="USER_NAME" Type="varchar2" MaxLength="20" />
+          <Property Name="PASSWORD" Type="varchar2" MaxLength="20" />
+          <Property Name="CONFIRMPASSWORD" Type="varchar2" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="TQ_MS_TRUCK_COMP">
+          <Key>
+            <PropertyRef Name="TRUCK_CODE" />
+          </Key>
+          <Property Name="TRUCK_COMP_ID" Type="number" Precision="38" Scale="0" StoreGeneratedPattern="Identity" />
+          <Property Name="TRUCK_CODE" Type="varchar2" MaxLength="20" Nullable="false" />
+          <Property Name="TRUCK_NAME" Type="varchar2" MaxLength="200" />
+          <Property Name="TYPE" Type="varchar2" MaxLength="1" />
+          <Property Name="CARD_ID" Type="varchar2" MaxLength="20" />
+          <Property Name="CARD_BGN" Type="date" />
+          <Property Name="BGN_DATE" Type="date" />
+          <Property Name="CORPORATE_NO" Type="varchar2" MaxLength="50" />
+          <Property Name="ADDRESS_NO" Type="varchar2" MaxLength="20" />
+          <Property Name="BUILDING" Type="varchar2" MaxLength="3" />
+          <Property Name="FLOOR" Type="varchar2" MaxLength="3" />
+          <Property Name="VILLAGE_NO" Type="varchar2" MaxLength="50" />
+          <Property Name="VILLAGE" Type="varchar2" MaxLength="50" />
+          <Property Name="SOI" Type="varchar2" MaxLength="50" />
+          <Property Name="ROAD" Type="varchar2" MaxLength="50" />
+          <Property Name="DISTRICT_ID" Type="varchar2" MaxLength="50" />
+          <Property Name="AMPHUR_ID" Type="varchar2" MaxLength="50" />
+          <Property Name="PROVINCE_ID" Type="varchar2" MaxLength="50" />
+          <Property Name="ZIPCODE" Type="varchar2" MaxLength="10" />
+          <Property Name="TEL" Type="varchar2" MaxLength="20" />
+          <Property Name="FAX" Type="varchar2" MaxLength="20" />
+          <Property Name="NEARLOCATE" Type="varchar2" MaxLength="50" />
+          <Property Name="CONTACT_NAME" Type="varchar2" MaxLength="250" />
+          <Property Name="MOBILE" Type="varchar2" MaxLength="20" />
+          <Property Name="CREATED_BY" Type="varchar2" MaxLength="20" />
+          <Property Name="CREATED_DATE" Type="timestamp" Precision="6" />
+          <Property Name="UPDATED_BY" Type="number" Precision="38" Scale="0" />
+          <Property Name="UPDATED_DATE" Type="timestamp" Precision="6" />
+          <Property Name="IS_DELETED" Type="varchar2" MaxLength="1" />
+          <Property Name="CANCEL_BY" Type="varchar2" MaxLength="1" />
+          <Property Name="CANCEL_DATE" Type="timestamp" Precision="6" />
+          <Property Name="ENT_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="CMP_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="FAL_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="USR_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="BPN_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="STATUS_IX" Type="number" Precision="19" Scale="0" />
+          <Property Name="CARD_EXPIRE" Type="timestamp" Precision="6" />
+          <Property Name="USERNAME" Type="varchar2" MaxLength="20" />
+          <Property Name="PASSWORD" Type="varchar2" MaxLength="20" />
+          <Property Name="CONFIRMPASSWORD" Type="varchar2" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="TQ_MS_TRUCK_INFO">
+          <Key>
+            <PropertyRef Name="TRUCK_INFO_ID" />
+          </Key>
+          <Property Name="TRUCK_INFO_ID" Type="number" Precision="38" Scale="0" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="COMPANY_ID" Type="varchar2" MaxLength="20" />
+          <Property Name="TRUCK_ID" Type="varchar2" MaxLength="20" Nullable="false" />
+          <Property Name="PROVINCE" Type="varchar2" MaxLength="200" />
+          <Property Name="TRUCK_LICENSE" Type="varchar2" MaxLength="13" />
+          <Property Name="TRUCK_TYPE" Type="varchar2" MaxLength="8" />
+          <Property Name="TRUCK_STATUS" Type="number" Precision="19" Scale="0" />
+          <Property Name="EXPIRATION_DATE" Type="date" />
+          <Property Name="SAFE_WEIGHT" Type="number" Precision="19" Scale="0" />
+          <Property Name="CREATED_BY" Type="number" Precision="19" Scale="0" />
+          <Property Name="CREATED_DATE" Type="timestamp" Precision="6" />
+          <Property Name="UPDATED_BY" Type="varchar2" MaxLength="20" />
+          <Property Name="UPDATED_DATE" Type="timestamp" Precision="6" />
+          <Property Name="IS_DELETED" Type="varchar2" MaxLength="20" />
+          <Property Name="CANCEL_ID" Type="varchar2" MaxLength="20" />
+          <Property Name="CANCEL_DATE" Type="timestamp" Precision="6" />
+          <Property Name="ENT_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="CMP_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="FAL_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="USR_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="BPN_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="STATUS" Type="number" Precision="19" Scale="0" />
+        </EntityType>
+        <EntityType Name="TQ_MS_TYPEWORK">
+          <Key>
+            <PropertyRef Name="CODE" />
+          </Key>
+          <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CODE" Type="varchar2" MaxLength="20" Nullable="false" />
+          <Property Name="NAME" Type="varchar2" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="TQ_RN_RUNNUMBER">
+          <Key>
+            <PropertyRef Name="RUNID" />
+          </Key>
+          <Property Name="RUNID" Type="number" Precision="19" Scale="0" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RUNCODE" Type="varchar2" MaxLength="20" Nullable="false" />
+          <Property Name="RUNNUMBER" Type="number" Precision="19" Scale="0" Nullable="false" />
+          <Property Name="RUNNAME" Type="varchar2" MaxLength="100" />
+          <Property Name="STATUS" Type="number" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="RUNTYPE" Type="varchar2" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TQ_TR_QUOTA">
+          <Key>
+            <PropertyRef Name="QUOTA_ID" />
+          </Key>
+          <Property Name="QUOTA_ID" Type="number" Precision="38" Scale="0" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="QUOTA_DATE" Type="date" />
+          <Property Name="TIME_SLOT_CODE" Type="varchar2" MaxLength="20" />
+          <Property Name="START_TIME" Type="timestamp" Precision="6" />
+          <Property Name="END_TIME" Type="timestamp" Precision="6" />
+          <Property Name="PERIOD" Type="varchar2" MaxLength="2" />
+          <Property Name="OPERATOR_TYPE" Type="varchar2" MaxLength="20" />
+          <Property Name="CATAGOTY" Type="varchar2" MaxLength="2" />
+          <Property Name="QTY" Type="number" Precision="19" Scale="0" />
+          <Property Name="RES_QTY" Type="number" Precision="19" Scale="0" />
+          <Property Name="AVA_QTY" Type="number" Precision="19" Scale="0" />
+          <Property Name="CREATED_BY" Type="number" Precision="19" Scale="0" />
+          <Property Name="CREATED_DATE" Type="timestamp" Precision="6" />
+          <Property Name="UPDATED_BY" Type="number" Precision="19" Scale="0" />
+          <Property Name="UPDATED_DATE" Type="timestamp" Precision="6" />
+          <Property Name="IS_DELETED" Type="varchar2" MaxLength="1" />
+          <Property Name="CANCEL_BY" Type="number" Precision="19" Scale="0" />
+          <Property Name="CANCEL_DATE" Type="timestamp" Precision="6" />
+          <Property Name="ENT_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="CMP_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="FAL_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="USR_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="BPN_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="STATUS_IX" Type="number" Precision="19" Scale="0" />
+        </EntityType>
+        <EntityType Name="TQ_TRUCK_VISIT_HIS">
+          <Key>
+            <PropertyRef Name="TRUCK_VISIT_HIS_ID" />
+          </Key>
+          <Property Name="TRUCK_VISIT_HIS_ID" Type="number" Precision="38" Scale="0" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TRUCK_VISIT_NO" Type="number" Precision="38" Scale="0" />
+          <Property Name="TRUCK_VISIT_DATE" Type="timestamp" Precision="6" />
+          <Property Name="TRUCK_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="START_TIME" Type="timestamp" Precision="6" />
+          <Property Name="END_TIME" Type="timestamp" Precision="6" />
+          <Property Name="DURATION" Type="timestamp" Precision="6" />
+          <Property Name="TERMINAL_ID" Type="varchar2" MaxLength="20" />
+          <Property Name="SUB_GATE_NO" Type="varchar2" MaxLength="1" />
+          <Property Name="FILE_NAME" Type="varchar2" MaxLength="200" />
+          <Property Name="CREATED_BY" Type="number" Precision="19" Scale="0" />
+          <Property Name="CREATED_DATE" Type="timestamp" Precision="6" />
+          <Property Name="UPDATED_BY" Type="number" Precision="19" Scale="0" />
+          <Property Name="UPDATED_DATE" Type="timestamp" Precision="6" />
+          <Property Name="IS_DELETED" Type="varchar2" MaxLength="1" />
+          <Property Name="CANCEL_BY" Type="number" Precision="19" Scale="0" />
+          <Property Name="CANCEL_DATE" Type="timestamp" Precision="6" />
+          <Property Name="ENT_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="CMP_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="FAL_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="USR_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="BPN_ID" Type="number" Precision="19" Scale="0" />
+          <Property Name="STATUS_IX" Type="number" Precision="19" Scale="0" />
+        </EntityType>
+        <EntityContainer Name="Model_TQStoreContainer">
+          <EntitySet Name="TQ_MS_DRIVER_INFO" EntityType="Self.TQ_MS_DRIVER_INFO" Schema="TQ" store:Type="Tables" />
+          <EntitySet Name="TQ_MS_TERMINAL" EntityType="Self.TQ_MS_TERMINAL" Schema="TQ" store:Type="Tables" />
+          <EntitySet Name="TQ_MS_TRUCK_COMP" EntityType="Self.TQ_MS_TRUCK_COMP" Schema="TQ" store:Type="Tables" />
+          <EntitySet Name="TQ_MS_TRUCK_INFO" EntityType="Self.TQ_MS_TRUCK_INFO" Schema="TQ" store:Type="Tables" />
+          <EntitySet Name="TQ_MS_TYPEWORK" EntityType="Self.TQ_MS_TYPEWORK" Schema="TQ" store:Type="Tables" />
+          <EntitySet Name="TQ_RN_RUNNUMBER" EntityType="Self.TQ_RN_RUNNUMBER" Schema="TQ" store:Type="Tables" />
+          <EntitySet Name="TQ_TR_QUOTA" EntityType="Self.TQ_TR_QUOTA" Schema="TQ" store:Type="Tables" />
+          <EntitySet Name="TQ_TRUCK_VISIT_HIS" EntityType="Self.TQ_TRUCK_VISIT_HIS" Schema="TQ" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model_TQ" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TQ_MS_TERMINAL">
+          <Key>
+            <PropertyRef Name="TERMINAL_CODE" />
+          </Key>
+          <Property Name="TERMINAL_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TERMINAL_CODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TERMINAL_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="OPERATION" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="LOCATION" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="WEBSITE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="TEL" Type="Decimal" Precision="30" Scale="0" />
+          <Property Name="AUTHORIZATION_CODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CREATED_BY" Type="Int64" />
+          <Property Name="CREATED_DATE" Type="DateTime" />
+          <Property Name="UPDATED_BY" Type="Int64" />
+          <Property Name="UPDATED_DATE" Type="DateTime" />
+          <Property Name="IS_DELETED" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CANCEL_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CANCEL_DATE" Type="DateTime" />
+          <Property Name="ENT_ID" Type="Int64" />
+          <Property Name="CMP_ID" Type="Int64" />
+          <Property Name="FAL_ID" Type="Int64" />
+          <Property Name="USR_ID" Type="Int64" />
+          <Property Name="BPN_ID" Type="Int64" />
+          <Property Name="STATUS_IX" Type="Int64" />
+          <Property Name="CARD_ID" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="CONNECT_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FAX" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ADDRESS" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="USER_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PASSWORD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CONFIRMPASSWORD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="Entities_ConnStr" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TQ_MS_TERMINAL" EntityType="Self.TQ_MS_TERMINAL" />
+          <EntitySet Name="TQ_RN_RUNNUMBER" EntityType="Model_TQ.TQ_RN_RUNNUMBER" />
+          <EntitySet Name="TQ_MS_TYPEWORK" EntityType="Model_TQ.TQ_MS_TYPEWORK" />
+          <EntitySet Name="TQ_TR_QUOTA" EntityType="Model_TQ.TQ_TR_QUOTA" />
+          <EntitySet Name="TQ_TRUCK_VISIT_HIS" EntityType="Model_TQ.TQ_TRUCK_VISIT_HIS" />
+          <EntitySet Name="TQ_MS_TRUCK_COMP" EntityType="Model_TQ.TQ_MS_TRUCK_COMP" />
+          <EntitySet Name="TQ_MS_DRIVER_INFO" EntityType="Model_TQ.TQ_MS_DRIVER_INFO" />
+          <EntitySet Name="TQ_MS_TRUCK_INFO" EntityType="Model_TQ.TQ_MS_TRUCK_INFO" />
+        </EntityContainer>
+        <EntityType Name="TQ_RN_RUNNUMBER">
+          <Key>
+            <PropertyRef Name="RUNID" />
+          </Key>
+          <Property Name="RUNID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RUNCODE" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="RUNNUMBER" Type="Int64" Nullable="false" />
+          <Property Name="RUNNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="STATUS" Type="Boolean" Nullable="false" />
+          <Property Name="RUNTYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TQ_MS_TYPEWORK">
+          <Key>
+            <PropertyRef Name="CODE" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CODE" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TQ_TR_QUOTA">
+          <Key>
+            <PropertyRef Name="QUOTA_ID" />
+          </Key>
+          <Property Name="QUOTA_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QUOTA_DATE" Type="DateTime" />
+          <Property Name="TIME_SLOT_CODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="START_TIME" Type="DateTime" Precision="6" />
+          <Property Name="END_TIME" Type="DateTime" Precision="6" />
+          <Property Name="PERIOD" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="OPERATOR_TYPE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CATAGOTY" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="QTY" Type="Int64" />
+          <Property Name="RES_QTY" Type="Int64" />
+          <Property Name="AVA_QTY" Type="Int64" />
+          <Property Name="CREATED_BY" Type="Int64" />
+          <Property Name="CREATED_DATE" Type="DateTime" Precision="6" />
+          <Property Name="UPDATED_BY" Type="Int64" />
+          <Property Name="UPDATED_DATE" Type="DateTime" Precision="6" />
+          <Property Name="IS_DELETED" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CANCEL_BY" Type="Int64" />
+          <Property Name="CANCEL_DATE" Type="DateTime" Precision="6" />
+          <Property Name="ENT_ID" Type="Int64" />
+          <Property Name="CMP_ID" Type="Int64" />
+          <Property Name="FAL_ID" Type="Int64" />
+          <Property Name="USR_ID" Type="Int64" />
+          <Property Name="BPN_ID" Type="Int64" />
+          <Property Name="STATUS_IX" Type="Int64" />
+        </EntityType>
+        <EntityType Name="TQ_TRUCK_VISIT_HIS">
+          <Key>
+            <PropertyRef Name="TRUCK_VISIT_HIS_ID" />
+          </Key>
+          <Property Name="TRUCK_VISIT_HIS_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TRUCK_VISIT_NO" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="TRUCK_VISIT_DATE" Type="DateTime" Precision="6" />
+          <Property Name="TRUCK_ID" Type="Int64" />
+          <Property Name="START_TIME" Type="DateTime" Precision="6" />
+          <Property Name="END_TIME" Type="DateTime" Precision="6" />
+          <Property Name="DURATION" Type="DateTime" Precision="6" />
+          <Property Name="TERMINAL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SUB_GATE_NO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="FILE_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="CREATED_BY" Type="Int64" />
+          <Property Name="CREATED_DATE" Type="DateTime" Precision="6" />
+          <Property Name="UPDATED_BY" Type="Int64" />
+          <Property Name="UPDATED_DATE" Type="DateTime" Precision="6" />
+          <Property Name="IS_DELETED" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CANCEL_BY" Type="Int64" />
+          <Property Name="CANCEL_DATE" Type="DateTime" Precision="6" />
+          <Property Name="ENT_ID" Type="Int64" />
+          <Property Name="CMP_ID" Type="Int64" />
+          <Property Name="FAL_ID" Type="Int64" />
+          <Property Name="USR_ID" Type="Int64" />
+          <Property Name="BPN_ID" Type="Int64" />
+          <Property Name="STATUS_IX" Type="Int64" />
+        </EntityType>
+        <EntityType Name="TQ_MS_TRUCK_COMP">
+          <Key>
+            <PropertyRef Name="TRUCK_CODE" />
+          </Key>
+          <Property Name="TRUCK_COMP_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TRUCK_CODE" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TRUCK_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="TYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CARD_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CARD_BGN" Type="DateTime" />
+          <Property Name="BGN_DATE" Type="DateTime" />
+          <Property Name="CORPORATE_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ADDRESS_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="BUILDING" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="FLOOR" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="VILLAGE_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VILLAGE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SOI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ROAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DISTRICT_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AMPHUR_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PROVINCE_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ZIPCODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TEL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FAX" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="NEARLOCATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CONTACT_NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="MOBILE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CREATED_BY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CREATED_DATE" Type="DateTime" Precision="6" />
+          <Property Name="UPDATED_BY" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="UPDATED_DATE" Type="DateTime" Precision="6" />
+          <Property Name="IS_DELETED" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CANCEL_BY" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CANCEL_DATE" Type="DateTime" Precision="6" />
+          <Property Name="ENT_ID" Type="Int64" />
+          <Property Name="CMP_ID" Type="Int64" />
+          <Property Name="FAL_ID" Type="Int64" />
+          <Property Name="USR_ID" Type="Int64" />
+          <Property Name="BPN_ID" Type="Int64" />
+          <Property Name="STATUS_IX" Type="Int64" />
+          <Property Name="CARD_EXPIRE" Type="DateTime" Nullable="false" />
+          <Property Name="USERNAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PASSWORD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CONFIRMPASSWORD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TQ_MS_DRIVER_INFO">
+          <Key>
+            <PropertyRef Name="DRIVER_INFO_ID" />
+          </Key>
+          <Property Name="DRIVER_INFO_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TRANS_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DRIVER_LICENSE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DRIVER_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ADDRESS" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="TEL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CREATED_BY" Type="Int64" />
+          <Property Name="CREATED_DATE" Type="DateTime" Precision="6" />
+          <Property Name="UPDATED_BY" Type="Int64" />
+          <Property Name="UPDATED_DATE" Type="DateTime" Precision="6" />
+          <Property Name="IS_DELETED" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CANCEL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CANCEL_DATE" Type="DateTime" Precision="6" />
+          <Property Name="ENT_ID" Type="Int64" />
+          <Property Name="CMP_ID" Type="Int64" />
+          <Property Name="FAL_ID" Type="Int64" />
+          <Property Name="USR_ID" Type="Int64" />
+          <Property Name="BPN_ID" Type="Int64" />
+          <Property Name="STATUS_IX" Type="Int64" />
+        </EntityType>
+        <EntityType Name="TQ_MS_TRUCK_INFO">
+          <Key>
+            <PropertyRef Name="TRUCK_INFO_ID" />
+          </Key>
+          <Property Name="TRUCK_INFO_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="COMPANY_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TRUCK_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PROVINCE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="TRUCK_LICENSE" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="TRUCK_TYPE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="TRUCK_STATUS" Type="Int64" />
+          <Property Name="EXPIRATION_DATE" Type="DateTime" />
+          <Property Name="SAFE_WEIGHT" Type="Int64" />
+          <Property Name="CREATED_BY" Type="Int64" />
+          <Property Name="CREATED_DATE" Type="DateTime" Precision="6" />
+          <Property Name="UPDATED_BY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="UPDATED_DATE" Type="DateTime" Precision="6" />
+          <Property Name="IS_DELETED" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CANCEL_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CANCEL_DATE" Type="DateTime" Precision="6" />
+          <Property Name="ENT_ID" Type="Int64" />
+          <Property Name="CMP_ID" Type="Int64" />
+          <Property Name="FAL_ID" Type="Int64" />
+          <Property Name="USR_ID" Type="Int64" />
+          <Property Name="BPN_ID" Type="Int64" />
+          <Property Name="STATUS" Type="Int64" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Model_TQStoreContainer" CdmEntityContainer="Entities_ConnStr">
+          <EntitySetMapping Name="TQ_MS_TERMINAL">
+            <EntityTypeMapping TypeName="Model_TQ.TQ_MS_TERMINAL">
+              <MappingFragment StoreEntitySet="TQ_MS_TERMINAL">
+                <ScalarProperty Name="CONFIRMPASSWORD" ColumnName="CONFIRMPASSWORD" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="TERMINAL_ID" ColumnName="TERMINAL_ID" />
+                <ScalarProperty Name="TERMINAL_CODE" ColumnName="TERMINAL_CODE" />
+                <ScalarProperty Name="TERMINAL_NAME" ColumnName="TERMINAL_NAME" />
+                <ScalarProperty Name="OPERATION" ColumnName="OPERATION" />
+                <ScalarProperty Name="LOCATION" ColumnName="LOCATION" />
+                <ScalarProperty Name="WEBSITE" ColumnName="WEBSITE" />
+                <ScalarProperty Name="TEL" ColumnName="TEL" />
+                <ScalarProperty Name="AUTHORIZATION_CODE" ColumnName="AUTHORIZATION_CODE" />
+                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+                <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+                <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+                <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+                <ScalarProperty Name="IS_DELETED" ColumnName="IS_DELETED" />
+                <ScalarProperty Name="CANCEL_BY" ColumnName="CANCEL_BY" />
+                <ScalarProperty Name="CANCEL_DATE" ColumnName="CANCEL_DATE" />
+                <ScalarProperty Name="ENT_ID" ColumnName="ENT_ID" />
+                <ScalarProperty Name="CMP_ID" ColumnName="CMP_ID" />
+                <ScalarProperty Name="FAL_ID" ColumnName="FAL_ID" />
+                <ScalarProperty Name="USR_ID" ColumnName="USR_ID" />
+                <ScalarProperty Name="BPN_ID" ColumnName="BPN_ID" />
+                <ScalarProperty Name="STATUS_IX" ColumnName="STATUS_IX" />
+                <ScalarProperty Name="CARD_ID" ColumnName="CARD_ID" />
+                <ScalarProperty Name="CONNECT_NAME" ColumnName="CONNECT_NAME" />
+                <ScalarProperty Name="FAX" ColumnName="FAX" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TQ_RN_RUNNUMBER">
+            <EntityTypeMapping TypeName="Model_TQ.TQ_RN_RUNNUMBER">
+              <MappingFragment StoreEntitySet="TQ_RN_RUNNUMBER">
+                <ScalarProperty Name="RUNTYPE" ColumnName="RUNTYPE" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="RUNNAME" ColumnName="RUNNAME" />
+                <ScalarProperty Name="RUNNUMBER" ColumnName="RUNNUMBER" />
+                <ScalarProperty Name="RUNCODE" ColumnName="RUNCODE" />
+                <ScalarProperty Name="RUNID" ColumnName="RUNID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TQ_MS_TYPEWORK">
+            <EntityTypeMapping TypeName="Model_TQ.TQ_MS_TYPEWORK">
+              <MappingFragment StoreEntitySet="TQ_MS_TYPEWORK">
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TQ_TR_QUOTA">
+            <EntityTypeMapping TypeName="Model_TQ.TQ_TR_QUOTA">
+              <MappingFragment StoreEntitySet="TQ_TR_QUOTA">
+                <ScalarProperty Name="STATUS_IX" ColumnName="STATUS_IX" />
+                <ScalarProperty Name="BPN_ID" ColumnName="BPN_ID" />
+                <ScalarProperty Name="USR_ID" ColumnName="USR_ID" />
+                <ScalarProperty Name="FAL_ID" ColumnName="FAL_ID" />
+                <ScalarProperty Name="CMP_ID" ColumnName="CMP_ID" />
+                <ScalarProperty Name="ENT_ID" ColumnName="ENT_ID" />
+                <ScalarProperty Name="CANCEL_DATE" ColumnName="CANCEL_DATE" />
+                <ScalarProperty Name="CANCEL_BY" ColumnName="CANCEL_BY" />
+                <ScalarProperty Name="IS_DELETED" ColumnName="IS_DELETED" />
+                <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+                <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+                <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+                <ScalarProperty Name="AVA_QTY" ColumnName="AVA_QTY" />
+                <ScalarProperty Name="RES_QTY" ColumnName="RES_QTY" />
+                <ScalarProperty Name="QTY" ColumnName="QTY" />
+                <ScalarProperty Name="CATAGOTY" ColumnName="CATAGOTY" />
+                <ScalarProperty Name="OPERATOR_TYPE" ColumnName="OPERATOR_TYPE" />
+                <ScalarProperty Name="PERIOD" ColumnName="PERIOD" />
+                <ScalarProperty Name="END_TIME" ColumnName="END_TIME" />
+                <ScalarProperty Name="START_TIME" ColumnName="START_TIME" />
+                <ScalarProperty Name="TIME_SLOT_CODE" ColumnName="TIME_SLOT_CODE" />
+                <ScalarProperty Name="QUOTA_DATE" ColumnName="QUOTA_DATE" />
+                <ScalarProperty Name="QUOTA_ID" ColumnName="QUOTA_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TQ_TRUCK_VISIT_HIS">
+            <EntityTypeMapping TypeName="Model_TQ.TQ_TRUCK_VISIT_HIS">
+              <MappingFragment StoreEntitySet="TQ_TRUCK_VISIT_HIS">
+                <ScalarProperty Name="STATUS_IX" ColumnName="STATUS_IX" />
+                <ScalarProperty Name="BPN_ID" ColumnName="BPN_ID" />
+                <ScalarProperty Name="USR_ID" ColumnName="USR_ID" />
+                <ScalarProperty Name="FAL_ID" ColumnName="FAL_ID" />
+                <ScalarProperty Name="CMP_ID" ColumnName="CMP_ID" />
+                <ScalarProperty Name="ENT_ID" ColumnName="ENT_ID" />
+                <ScalarProperty Name="CANCEL_DATE" ColumnName="CANCEL_DATE" />
+                <ScalarProperty Name="CANCEL_BY" ColumnName="CANCEL_BY" />
+                <ScalarProperty Name="IS_DELETED" ColumnName="IS_DELETED" />
+                <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+                <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+                <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+                <ScalarProperty Name="FILE_NAME" ColumnName="FILE_NAME" />
+                <ScalarProperty Name="SUB_GATE_NO" ColumnName="SUB_GATE_NO" />
+                <ScalarProperty Name="TERMINAL_ID" ColumnName="TERMINAL_ID" />
+                <ScalarProperty Name="DURATION" ColumnName="DURATION" />
+                <ScalarProperty Name="END_TIME" ColumnName="END_TIME" />
+                <ScalarProperty Name="START_TIME" ColumnName="START_TIME" />
+                <ScalarProperty Name="TRUCK_ID" ColumnName="TRUCK_ID" />
+                <ScalarProperty Name="TRUCK_VISIT_DATE" ColumnName="TRUCK_VISIT_DATE" />
+                <ScalarProperty Name="TRUCK_VISIT_NO" ColumnName="TRUCK_VISIT_NO" />
+                <ScalarProperty Name="TRUCK_VISIT_HIS_ID" ColumnName="TRUCK_VISIT_HIS_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TQ_MS_TRUCK_COMP">
+            <EntityTypeMapping TypeName="Model_TQ.TQ_MS_TRUCK_COMP">
+              <MappingFragment StoreEntitySet="TQ_MS_TRUCK_COMP">
+                <ScalarProperty Name="CONFIRMPASSWORD" ColumnName="CONFIRMPASSWORD" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="CARD_EXPIRE" ColumnName="CARD_EXPIRE" />
+                <ScalarProperty Name="STATUS_IX" ColumnName="STATUS_IX" />
+                <ScalarProperty Name="BPN_ID" ColumnName="BPN_ID" />
+                <ScalarProperty Name="USR_ID" ColumnName="USR_ID" />
+                <ScalarProperty Name="FAL_ID" ColumnName="FAL_ID" />
+                <ScalarProperty Name="CMP_ID" ColumnName="CMP_ID" />
+                <ScalarProperty Name="ENT_ID" ColumnName="ENT_ID" />
+                <ScalarProperty Name="CANCEL_DATE" ColumnName="CANCEL_DATE" />
+                <ScalarProperty Name="CANCEL_BY" ColumnName="CANCEL_BY" />
+                <ScalarProperty Name="IS_DELETED" ColumnName="IS_DELETED" />
+                <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+                <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+                <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+                <ScalarProperty Name="MOBILE" ColumnName="MOBILE" />
+                <ScalarProperty Name="CONTACT_NAME" ColumnName="CONTACT_NAME" />
+                <ScalarProperty Name="NEARLOCATE" ColumnName="NEARLOCATE" />
+                <ScalarProperty Name="FAX" ColumnName="FAX" />
+                <ScalarProperty Name="TEL" ColumnName="TEL" />
+                <ScalarProperty Name="ZIPCODE" ColumnName="ZIPCODE" />
+                <ScalarProperty Name="PROVINCE_ID" ColumnName="PROVINCE_ID" />
+                <ScalarProperty Name="AMPHUR_ID" ColumnName="AMPHUR_ID" />
+                <ScalarProperty Name="DISTRICT_ID" ColumnName="DISTRICT_ID" />
+                <ScalarProperty Name="ROAD" ColumnName="ROAD" />
+                <ScalarProperty Name="SOI" ColumnName="SOI" />
+                <ScalarProperty Name="VILLAGE" ColumnName="VILLAGE" />
+                <ScalarProperty Name="VILLAGE_NO" ColumnName="VILLAGE_NO" />
+                <ScalarProperty Name="FLOOR" ColumnName="FLOOR" />
+                <ScalarProperty Name="BUILDING" ColumnName="BUILDING" />
+                <ScalarProperty Name="ADDRESS_NO" ColumnName="ADDRESS_NO" />
+                <ScalarProperty Name="CORPORATE_NO" ColumnName="CORPORATE_NO" />
+                <ScalarProperty Name="BGN_DATE" ColumnName="BGN_DATE" />
+                <ScalarProperty Name="CARD_BGN" ColumnName="CARD_BGN" />
+                <ScalarProperty Name="CARD_ID" ColumnName="CARD_ID" />
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="TRUCK_NAME" ColumnName="TRUCK_NAME" />
+                <ScalarProperty Name="TRUCK_CODE" ColumnName="TRUCK_CODE" />
+                <ScalarProperty Name="TRUCK_COMP_ID" ColumnName="TRUCK_COMP_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TQ_MS_DRIVER_INFO">
+            <EntityTypeMapping TypeName="Model_TQ.TQ_MS_DRIVER_INFO">
+              <MappingFragment StoreEntitySet="TQ_MS_DRIVER_INFO">
+                <ScalarProperty Name="STATUS_IX" ColumnName="STATUS_IX" />
+                <ScalarProperty Name="BPN_ID" ColumnName="BPN_ID" />
+                <ScalarProperty Name="USR_ID" ColumnName="USR_ID" />
+                <ScalarProperty Name="FAL_ID" ColumnName="FAL_ID" />
+                <ScalarProperty Name="CMP_ID" ColumnName="CMP_ID" />
+                <ScalarProperty Name="ENT_ID" ColumnName="ENT_ID" />
+                <ScalarProperty Name="CANCEL_DATE" ColumnName="CANCEL_DATE" />
+                <ScalarProperty Name="CANCEL_ID" ColumnName="CANCEL_ID" />
+                <ScalarProperty Name="IS_DELETED" ColumnName="IS_DELETED" />
+                <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+                <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+                <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+                <ScalarProperty Name="TEL" ColumnName="TEL" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="DRIVER_NAME" ColumnName="DRIVER_NAME" />
+                <ScalarProperty Name="DRIVER_LICENSE" ColumnName="DRIVER_LICENSE" />
+                <ScalarProperty Name="TRANS_ID" ColumnName="TRANS_ID" />
+                <ScalarProperty Name="DRIVER_INFO_ID" ColumnName="DRIVER_INFO_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TQ_MS_TRUCK_INFO">
+            <EntityTypeMapping TypeName="Model_TQ.TQ_MS_TRUCK_INFO">
+              <MappingFragment StoreEntitySet="TQ_MS_TRUCK_INFO">
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="BPN_ID" ColumnName="BPN_ID" />
+                <ScalarProperty Name="USR_ID" ColumnName="USR_ID" />
+                <ScalarProperty Name="FAL_ID" ColumnName="FAL_ID" />
+                <ScalarProperty Name="CMP_ID" ColumnName="CMP_ID" />
+                <ScalarProperty Name="ENT_ID" ColumnName="ENT_ID" />
+                <ScalarProperty Name="CANCEL_DATE" ColumnName="CANCEL_DATE" />
+                <ScalarProperty Name="CANCEL_ID" ColumnName="CANCEL_ID" />
+                <ScalarProperty Name="IS_DELETED" ColumnName="IS_DELETED" />
+                <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
+                <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
+                <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+                <ScalarProperty Name="SAFE_WEIGHT" ColumnName="SAFE_WEIGHT" />
+                <ScalarProperty Name="EXPIRATION_DATE" ColumnName="EXPIRATION_DATE" />
+                <ScalarProperty Name="TRUCK_STATUS" ColumnName="TRUCK_STATUS" />
+                <ScalarProperty Name="TRUCK_TYPE" ColumnName="TRUCK_TYPE" />
+                <ScalarProperty Name="TRUCK_LICENSE" ColumnName="TRUCK_LICENSE" />
+                <ScalarProperty Name="PROVINCE" ColumnName="PROVINCE" />
+                <ScalarProperty Name="TRUCK_ID" ColumnName="TRUCK_ID" />
+                <ScalarProperty Name="COMPANY_ID" ColumnName="COMPANY_ID" />
+                <ScalarProperty Name="TRUCK_INFO_ID" ColumnName="TRUCK_INFO_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

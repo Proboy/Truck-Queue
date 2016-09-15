@@ -1,0 +1,51 @@
+.topnavbar{
+	height: 60px;
+    font-size: 18px;
+    line-height: 120px;
+    z-index: 0;
+    background-color: #5ec4d0;
+    border: none;
+}
+.horizontal-line{
+    height: 1px;
+    width: auto;
+    background-color: #5ec4d0;
+}
+
+.dropdown-toggle{
+    display: block;
+    text-decoration: none;
+    color: #3b4042;
+}
+
+.dropdown-toggle{
+    display: block;
+    text-decoration: none;
+    color: #3b4042;
+    background-color: none;
+}
+.dropdown-toggle > a:hover,
+.dropdown-toggle > a:focus,{
+    display: block;
+    text-decoration: none;
+    color: #3b4042;
+    background-color: none;
+}
+
+.nav .open>a, 
+.nav .open>a:focus, 
+.nav .open>a:hover{
+	background-color: #5ec4d0;
+}
+.nav>li>a:focus, 
+.nav>li>a:visited {
+	background-color: #5ec4d0;
+}
+
+.dropdown-menu{
+	background-color: #5ec4d0;
+}
+
+.dropdown-menu > a:hover{
+	background-color: #5ec4d0;
+}

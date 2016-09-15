@@ -1,0 +1,261 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Root1.master.vb" Inherits="TQ.Root1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1, maximum-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+
+    <title>KASCO TRUCK QUEUE</title>
+
+    <link rel="icon" type="image/png" href="" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Athiti:400,300,700" rel="stylesheet" type="text/css"/>
+
+    <style type="text/css">
+        body {
+            font-family: 'Athiti', sans-serif;
+            font-weight: 400;
+            /*// Corresponds to the Bold 400 style;*/
+        }
+
+        strong,
+        .text-strong {
+            font-weight: 700; /*// Corresponds to the Bold 700 style*/
+        }
+
+        .text-light {
+            font-weight: 300; /*// Corresponds to the Light 300 style*/
+        }
+
+        h1, h2, h3, h4, h5, h6,
+        .h1, .h2, .h3, .h4, .h5, .h6 {
+            font-family: 'Athiti', sans-serif;
+            font-weight: 700;
+        }
+
+        img.resize100persent {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+
+}
+    </style>
+
+    <!-- ============ Add custom CSS here ============ -->
+    <!-- Bootstrap Core CSS -->
+    <link href="<%= ResolveClientUrl("~/css/bootstrap.min.css")%>" rel="stylesheet" type="text/css" />
+    <!-- Font Awesome -->
+    <link href="<%= ResolveClientUrl("~/css/font-awesome.min.css")%>" rel="stylesheet" type="text/css" />
+    <!-- sidebar CSS -->
+    <link href="<%= ResolveClientUrl("~/css/simple-sidebar.css")%>" rel="stylesheet" type="text/css" />
+    <!-- DatePick -->
+    <link href="<%= ResolveClientUrl("~/css/datepicker.css")%>" rel="stylesheet" type="text/css" />
+    <!-- Custom CSS -->
+    <link href="<%= ResolveClientUrl("~/css/style.css")%>" rel="stylesheet" type="text/css" />
+
+    <!-- Content for script asp.net -->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+    <body>
+    <form id="form1" runat="server" >
+
+    <div id="wrapper">
+        
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper" style="z-index:5;">
+            <img src="img/Logo.jpg" class="resize100persent"/>
+            <img src="img/pat_logo.jpg" class="resize100persent"/>
+
+            <dx:ASPxNavBar ID="nbMain" runat="server" AllowSelectItem="True" EnableAnimation="True" Width="100%">
+                <GroupHeaderStyle HorizontalAlign="Left" />
+                <ItemStyle HorizontalAlign="Left" />
+                <Groups>
+                    <dx:NavBarGroup Text="สำหรับผู้ประกอบการท่าเรือ" Expanded="False">
+                        <Items>
+                            <dx:NavBarItem Text="หน้าหลัก" NavigateUrl="~/Default.aspx">
+                                <Image Url="~/Images/Home-20.png">
+                                </Image>
+                            </dx:NavBarItem>
+                            <dx:NavBarItem Text="กำหนดโควต้า" NavigateUrl="~/WebForm_Quota_Management.aspx">
+                                <Image Url="~/Images/Monitor-20.png">
+                                </Image>
+                            </dx:NavBarItem>
+                            <dx:NavBarItem Text="บันทึกรอบรถเข้า-ออก" NavigateUrl="~/WebForm_TRUCK_VISIT_HIS.aspx">
+                                <Image Url="~/Images/Sorting Arrows Horizontal-20.png">
+                                </Image>
+                            </dx:NavBarItem>
+                            <dx:NavBarItem Text="ดาวโหลดไฟล์ EDI" NavigateUrl="~/WebForm_Download_EDI.aspx">
+                                <Image Url="~/Images/Download From Cloud-20.png">
+                                </Image>
+                            </dx:NavBarItem>
+                            <dx:NavBarItem Text="ลงทะเบียนการท่าเรือ" NavigateUrl="~/TQ_MS_Terminal_WebForm.aspx">
+                                <Image Url="~/Images/Add User Male-20.png">
+                                </Image>
+                            </dx:NavBarItem>
+                            <dx:NavBarItem Text="ออกจากระบบ">
+                                <Image Url="~/Images/Logout Rounded-20.png">
+                                </Image>
+                            </dx:NavBarItem>
+                            
+                        </Items>
+                    </dx:NavBarGroup>
+                    <dx:NavBarGroup Text="นำเข้าไฟล์ EDI" Expanded="False">
+                        <Items>
+                            <dx:NavBarItem Text="ตารางเรือ">
+                                <Image Height="16px" Width="16px">
+                                </Image>
+                            </dx:NavBarItem>
+                            <dx:NavBarItem Text="สายเรือ">
+                                <Image Height="16px" Width="16px">
+                                </Image>
+                            </dx:NavBarItem>
+                            <dx:NavBarItem Text="ตู้คอนเทนเนอร์">
+                                <Image Height="16px" Width="16px">
+                                </Image>
+                            </dx:NavBarItem>
+                            <dx:NavBarItem Text="เงื่อนไขค่าภาระ">
+                            </dx:NavBarItem>
+                            <dx:NavBarItem Text="พนักงานขับรถ">
+                            </dx:NavBarItem>
+                            <dx:NavBarItem Text="หัวลาก/รถขนส่ง">
+                            </dx:NavBarItem>
+                            <dx:NavBarItem Text="สถานะตู้คอนเทนเนอร์">
+                            </dx:NavBarItem>
+                            <dx:NavBarItem Text="พื้นที่/โซนวางตู้">
+                            </dx:NavBarItem>
+                            <dx:NavBarItem Text="ประเภทตู้">
+                            </dx:NavBarItem>
+                            <dx:NavBarItem Text="ประเภทกิจกรรม">
+                            </dx:NavBarItem>
+                        </Items>
+                    </dx:NavBarGroup>
+                    <dx:NavBarGroup Text="รายงานและสถิติ" Expanded="False">
+                        <Items>
+                            <dx:NavBarItem Text="รายงานสรุปการลงทะเบียน">
+                                <Image Height="16px" Width="16px">
+                                </Image>
+                            </dx:NavBarItem>
+                        </Items>
+                    </dx:NavBarGroup>
+                    <dx:NavBarGroup Text="สำหรับผู้ประกอบการขนส่ง" Expanded="False">
+                        <Items>
+                            <dx:NavBarItem Text="หน้าหลัก">
+                                <Image Height="16px" Width="16px">
+                                </Image>
+                            </dx:NavBarItem>
+                            <dx:NavBarItem Text="ดูข้อมูลโควต้า">
+                                <Image Height="16px" Width="16px">
+                                </Image>
+                            </dx:NavBarItem>
+                            <dx:NavBarItem Text="จองคิว">
+                                <Image Height="16px" Width="16px">
+                                </Image>
+                            </dx:NavBarItem>
+                            <dx:NavBarItem Text="ข้อมูลผู้ประกอบการขนส่ง" NavigateUrl="~/WebForm_Truck_Comp.aspx">
+                                <Image Url="~/Images/Department-20.png">
+                                </Image>
+                            </dx:NavBarItem>
+                            <dx:NavBarItem Text="ข้อมูลรถหัวลาก/รถขนส่ง" NavigateUrl="~/WebForm_Truck_Info.aspx">
+                                <Image Url="~/Images/Truck-20.png">
+                                </Image>
+                            </dx:NavBarItem>
+                            <dx:NavBarItem Text="ข้อมูลพนักงานขับรถ" NavigateUrl="~/WebForm_Driver_Info.aspx">
+                                <Image Url="~/Images/Businessman-20.png">
+                                </Image>
+                            </dx:NavBarItem>
+                            <dx:NavBarItem Text="สถานะตู้คอนเทนเนอร์">
+                            </dx:NavBarItem>
+                        </Items>
+                    </dx:NavBarGroup>
+                    <dx:NavBarGroup Text="รายงานและสถิติ" Expanded="False">
+                        <Items>
+                            <dx:NavBarItem Text="รายงานสรุปการลงทะเบียน">
+                                <Image Height="16px" Width="16px">
+                                </Image>
+                            </dx:NavBarItem>
+                        </Items>
+                    </dx:NavBarGroup>
+                </Groups>
+            </dx:ASPxNavBar>
+
+
+
+        </div>
+        <!-- /#sidebar-wrapper -->
+       
+        <!-- Toggle -->
+        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle" style="position: absolute; top: 100; left: 60; z-index: 200; margin: 10px;"><i class="fa fa-bars" aria-hidden="true"></i></a>
+        <!-- End Toggle -->
+
+        <!-- Content for script asp.net -->
+        <div id="page-content-wrapper"  >
+            <div class="container" >
+                <asp:ContentPlaceHolder ID="MainContent" runat="server"  >
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer class="stickyFooter">
+            
+            <div class="footerDown">
+                <div class="container">
+                    <p><%:DateTime.Today.Year.ToString()%> &copy; All Rights Reserved. KASCO DATABASE VERSION 4.0 </p>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+          
+    <!-- js -->
+    <script src="<%= ResolveClientUrl("~/js/jquery.js")%>" type="text/javascript"></script>
+    <script src="<%= ResolveClientUrl("~/js/bootstrap.min.js")%>" type="text/javascript"></script>
+    <script src="<%= ResolveClientUrl("~/js/bootstrap-datepicker.js")%>" type="text/javascript"></script>
+    <script src="<%= ResolveClientUrl("~/js/jquery.backstretch.js")%>" type="text/javascript"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+    <!-- Datepick -->
+    <script>
+    var nowTemp = new Date();
+    var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+     
+    var checkin = $('#dpd1').datepicker({
+      onRender: function(date) {
+        return date.valueOf() < now.valueOf() ? 'disabled' : '';
+      }
+    }).on('changeDate', function(ev) {
+      if (ev.date.valueOf() > checkout.date.valueOf()) {
+        var newDate = new Date(ev.date)
+        newDate.setDate(newDate.getDate() + 1);
+        checkout.setValue(newDate);
+      }
+      checkin.hide();
+      $('#dpd2')[0].focus();
+    }).data('datepicker');
+    var checkout = $('#dpd2').datepicker({
+      onRender: function(date) {
+        return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+      }
+    }).on('changeDate', function(ev) {
+      checkout.hide();
+    }).data('datepicker');
+    </script>
+
+    </form>
+</body>
+</html>

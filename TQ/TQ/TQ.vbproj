@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{E9B50B05-1AD7-40C7-8B75-F24E22CAA80B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TQ</RootNamespace>
+    <AssemblyName>TQ</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>TQ.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>TQ.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Utils.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.Resources.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.EntityDataSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.EntityDataSource.6.0.0\lib\net40\Microsoft.AspNet.EntityDataSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
+    <Reference Include="Oracle.DataAccess.EntityFramework, Version=6.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL" />
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL" />
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="DevExpress.Data.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v16.1.Core, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v16.1.Core, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Model_TQ.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_TQ.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model_TQ.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_TQ.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model_TQ.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_TQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Root1.Master.designer.vb">
+      <DependentUpon>Root1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Root1.Master.vb">
+      <DependentUpon>Root1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TQ_MS_DRIVER_INFO.vb">
+      <DependentUpon>Model_TQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TQ_MS_TERMINAL.vb">
+      <DependentUpon>Model_TQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TQ_MS_Terminal_WebForm.aspx.designer.vb">
+      <DependentUpon>TQ_MS_Terminal_WebForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TQ_MS_Terminal_WebForm.aspx.vb">
+      <DependentUpon>TQ_MS_Terminal_WebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="TQ_MS_TRUCK_COMP.vb">
+      <DependentUpon>Model_TQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TQ_MS_TRUCK_INFO.vb">
+      <DependentUpon>Model_TQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TQ_MS_TYPEWORK.vb">
+      <DependentUpon>Model_TQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TQ_RN_RUNNUMBER.vb">
+      <DependentUpon>Model_TQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TQ_TRUCK_VISIT_HIS.vb">
+      <DependentUpon>Model_TQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TQ_TR_QUOTA.vb">
+      <DependentUpon>Model_TQ.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm_Download_EDI.aspx.designer.vb">
+      <DependentUpon>WebForm_Download_EDI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm_Download_EDI.aspx.vb">
+      <DependentUpon>WebForm_Download_EDI.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm_Driver_Info.aspx.designer.vb">
+      <DependentUpon>WebForm_Driver_Info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm_Driver_Info.aspx.vb">
+      <DependentUpon>WebForm_Driver_Info.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm_Login.aspx.designer.vb">
+      <DependentUpon>WebForm_Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm_Login.aspx.vb">
+      <DependentUpon>WebForm_Login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm_Quota_Management.aspx.designer.vb">
+      <DependentUpon>WebForm_Quota_Management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm_Quota_Management.aspx.vb">
+      <DependentUpon>WebForm_Quota_Management.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm_Success.aspx.designer.vb">
+      <DependentUpon>WebForm_Success.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm_Success.aspx.vb">
+      <DependentUpon>WebForm_Success.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm_TQ_MS_TYPEWORK.aspx.designer.vb">
+      <DependentUpon>WebForm_TQ_MS_TYPEWORK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm_TQ_MS_TYPEWORK.aspx.vb">
+      <DependentUpon>WebForm_TQ_MS_TYPEWORK.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm_Truck_Appointment.aspx.designer.vb">
+      <DependentUpon>WebForm_Truck_Appointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm_Truck_Appointment.aspx.vb">
+      <DependentUpon>WebForm_Truck_Appointment.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm_Truck_Info.aspx.designer.vb">
+      <DependentUpon>WebForm_Truck_Info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm_Truck_Info.aspx.vb">
+      <DependentUpon>WebForm_Truck_Info.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm_Truck_Comp.aspx.designer.vb">
+      <DependentUpon>WebForm_Truck_Comp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm_Truck_Comp.aspx.vb">
+      <DependentUpon>WebForm_Truck_Comp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm_TRUCK_VISIT_HIS.aspx.designer.vb">
+      <DependentUpon>WebForm_TRUCK_VISIT_HIS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm_TRUCK_VISIT_HIS.aspx.vb">
+      <DependentUpon>WebForm_TRUCK_VISIT_HIS.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\simple-sidebar.css" />
+    <Content Include="css\style.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Images\Add Property-20.png" />
+    <Content Include="Images\Add User Male-20.png" />
+    <Content Include="Images\Businessman-20.png" />
+    <Content Include="Images\Calendar-20.png" />
+    <Content Include="Images\Contact Card Filled-20.png" />
+    <Content Include="Images\Delete-20.png" />
+    <Content Include="Images\Department-20.png" />
+    <Content Include="Images\Download From Cloud-20.png" />
+    <Content Include="Images\Edit Property-20 %281%29.png" />
+    <Content Include="Images\Home-20.png" />
+    <Content Include="Images\Logout Rounded-20.png" />
+    <Content Include="Images\Monitor-20.png" />
+    <Content Include="Images\Sorting Arrows Horizontal-20.png" />
+    <Content Include="Images\Truck-20.png" />
+    <Content Include="Images\Video File-20.png" />
+    <Content Include="img\Logo.jpg" />
+    <Content Include="img\mainpage_contact.png" />
+    <Content Include="img\mainpage_contant.jpg" />
+    <Content Include="img\mainpage_header.jpg" />
+    <Content Include="img\mainpage_login.png" />
+    <Content Include="img\mainpage_topleft.png" />
+    <Content Include="img\mainpage_welcome.png" />
+    <Content Include="img\pat_logo.jpg" />
+    <Content Include="js\bootstrap-datepicker.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="mainpage.html" />
+    <Content Include="Model_TQ.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model_TQ.edmx</DependentUpon>
+      <LastGenOutput>Model_TQ.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="Model_TQ.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model_TQ.edmx</DependentUpon>
+      <LastGenOutput>Model_TQ.vb</LastGenOutput>
+    </Content>
+    <Content Include="TQ_MS_Terminal_WebForm.aspx" />
+    <Content Include="WebForm_Download_EDI.aspx" />
+    <Content Include="WebForm_Driver_Info.aspx" />
+    <Content Include="WebForm_Login.aspx" />
+    <Content Include="WebForm_Quota_Management.aspx" />
+    <Content Include="WebForm_Success.aspx" />
+    <Content Include="WebForm_TQ_MS_TYPEWORK.aspx" />
+    <Content Include="WebForm_Truck_Appointment.aspx" />
+    <Content Include="WebForm_Truck_Info.aspx" />
+    <Content Include="WebForm_Truck_Comp.aspx" />
+    <Content Include="WebForm_TRUCK_VISIT_HIS.aspx" />
+    <EntityDeploy Include="Model_TQ.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model_TQ.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model_TQ.edmx.diagram">
+      <DependentUpon>Model_TQ.edmx</DependentUpon>
+    </Content>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="index.html" />
+    <Content Include="Web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Root1.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <!--<Content Include="Site.Master" />-->
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Contents\" />
+    <Folder Include="Downloads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <!--<ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>-->
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>13849</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:13849/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

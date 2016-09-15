@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ff80484afb3e4934b0bc86da261d459b" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="Model_TQ.TQ_MS_TERMINAL" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model_TQ.TQ_RN_RUNNUMBER" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model_TQ.TQ_MS_TYPEWORK" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Model_TQ.TQ_TR_QUOTA" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model_TQ.TQ_TRUCK_VISIT_HIS" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model_TQ.TQ_MS_TRUCK_COMP" Width="1.5" PointX="8.875" PointY="0.75" />
+        <EntityTypeShape EntityType="Model_TQ.TQ_MS_DRIVER_INFO" Width="1.5" PointX="2.75" PointY="5.75" />
+        <EntityTypeShape EntityType="Model_TQ.TQ_MS_TRUCK_INFO" Width="1.5" PointX="10.875" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
